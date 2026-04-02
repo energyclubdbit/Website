@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Club - Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .page-section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .event-card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1, h2 {
+            color: #38bdf8;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        a {
+            color: #22c55e;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #111;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">⚡ Energy Club</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="core.html">Core Members</a></li>
+        <li><a href="career.html">Career</a></li>
+    </ul>
+</nav>
+
+<section class="page-section">
+    <h1>Upcoming & Recent Events</h1>
+
+    <div class="event-card">
+        <h3>Biofuel and Cogeneration Seminar</h3>
+        <p><strong>Date:</strong> 6th March 2026<br>
+        <strong>Time:</strong> 10:00 AM – 12:00 PM<br>
+        <strong>Venue:</strong> Seminar Hall, 3rd Floor, A Wing<br>
+        <strong>Speaker:</strong> Dr. M. G. Gharpure</p>
+        <p>An insightful seminar focusing on biofuels, biomass briquettes, and cogeneration systems for sustainable industrial energy solutions.</p>
+    </div>
+
+    <h2>Upcoming Events</h2>
+
+    <div class="event-card">
+        <h3>Renewable Energy Hackathon</h3>
+        <p>Collaborate and innovate solutions for clean energy challenges.</p>
+        <a href="#">Register Now</a>
+    </div>
+
+    <div class="event-card">
+        <h3>EV Technology Seminar</h3>
+        <p>Explore the future of electric vehicles and battery systems.</p>
+        <a href="#">Register Now</a>
+    </div>
+
+    <h2>Past Seminars</h2>
+    <ul>
+        <li><strong>Advanced Hydrogen Technology:</strong> March & July 2025</li>
+        <li><strong>Energy Audits & Managers Seminar:</strong> Professional certification focus</li>
+    </ul>
+
+    <h2>Past Energy Audits</h2>
+    <ul>
+        <li>Reserve Bank of India (Fort) – Jan 2026</li>
+        <li>Railway Hospital</li>
+        <li>Pidilite Industries Ltd</li>
+        <li>Grand Hyatt Santacruz – March 2025</li>
+        <li>Godrej BKC – Feb 2025</li>
+        <li>Bidhata Industries Pvt Ltd, Badlapur – Jan 2025</li>
+    </ul>
+</section>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
