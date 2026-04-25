@@ -7,11 +7,10 @@
 }
 
 body{
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    overflow-x:hidden;
-    padding-top:80px;   /* Prevent content hiding behind fixed navbar */
-}
+   margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
 
 /* ================= BACKGROUND LAYER ================= */
 .particles,
