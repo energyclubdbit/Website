@@ -5,22 +5,128 @@
     <title>Energy Club - Events</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+ 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-     <a href="https://instagram.com/yourpage" target="_blank">
-    <i class="fab fa-instagram"></i>
-</a>
+ <style>
 
-<a href="https://linkedin.com/in/yourpage" target="_blank">
-    <i class="fab fa-linkedin"></i>
-</a>
-    
+
+/* NAVBAR */
+
+<nav class="navbar">
+    <div class="logo">⚡ Energy Club</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="core.html">Core Members</a></li>
+        <li><a href="career.html">Career</a></li>
+    </ul>
+</nav>
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* SECTION */
+.page-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1, h2 {
+    color: #38bdf8;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+/* EVENT CARDS */
+.event-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    transition: 0.3s;
+    animation: fadeIn 0.8s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(56,189,248,0.4);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: #22c55e;
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #16a34a;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+</style>   
 </head>
-<footer style="text-align:center; padding: 30px;">
-    <p>Connect with us</p>
-    <a href="https://instagram.com/yourpage" target="_blank">📸 Instagram</a> |
-    <a href="https://linkedin.com/in/yourpage" target="_blank">💼 LinkedIn</a>
-</footer>
+
 <body>
 
 <!-- Animated Background -->
@@ -46,45 +152,105 @@
 </nav>
 
 <!-- Page Content -->
+<!-- CONTENT -->
 <section class="page-section">
     <h1>Upcoming & Recent Events</h1>
 
-
-
+    <!-- UPCOMING -->
     <h2>Upcoming Events</h2>
 
     <div class="event-card">
-        <p>Details about upcoming energy event 1.</p>
-        <a href="energy_club_events_page_enhanced.html"> energy_club_events_page_enhanced.html </a>
+        <h3>Renewable Energy Awareness Drive</h3>
+        <p>
+            <strong>Date:</strong> 15 April 2026<br>
+            <strong>Time:</strong> 11:00 AM – 1:00 PM<br>
+            <strong>Venue:</strong> Seminar Hall
+        </p>
+        <p>Promoting sustainable energy practices among students.</p>
+        <a href="#" class="btn">Register Now</a>
     </div>
 
     <div class="event-card">
-        <p>Details about upcoming energy event 2.</p>
-        <a href="Energy_Club_Events2.html"> Energy_Club_Events2.html </a>
+        <h3>Solar Panel Installation Workshop</h3>
+        <p>
+            <strong>Date:</strong> 25 April 2026<br>
+            <strong>Time:</strong> 2:00 PM – 5:00 PM<br>
+            <strong>Venue:</strong> Energy Lab
+        </p>
+        <p>Hands-on training on solar panel setup and maintenance.</p>
+        <a href="#" class="btn">Register Now</a>
     </div>
 
+    <!-- PAST SEMINARS -->
     <h2>Past Seminars</h2>
 
-        <div class="event-card">
+    <div class="event-card">
         <h3>On-Grid Solar Workshop</h3>
-        <p>A hands-on technical session held in February 2025.</p>
+        <p>Held in February 2025 focusing on solar integration systems.</p>
     </div>
-    
-    <ul>
-        <li><strong>Advanced Hydrogen Technology:</strong> March & July 2025</li>
-        <li><strong>Energy Audits & Managers Seminar:</strong> Professional certification focus</li>
-    </ul>
 
+    <div class="event-card">
+        <h3>Advanced Hydrogen Technology</h3>
+        <p>Conducted in March & July 2025 on hydrogen energy innovations.</p>
+    </div>
+
+    <div class="event-card">
+        <h3>Energy Audits & Managers Seminar</h3>
+        <p>Focused on professional certification and auditing techniques.</p>
+    </div>
+
+    <!-- PAST AUDITS -->
     <h2>Past Energy Audits</h2>
-    <ul>
-        <li>Reserve Bank of India (Fort) – Jan 2026</li>
-        <li>Railway Hospital</li>
-        <li>Pidilite Industries Ltd</li>
-        <li>Grand Hyatt Santacruz – March 2025</li>
-        <li>Godrej BKC – Feb 2025</li>
-        <li>Bidhata Industries Pvt Ltd, Badlapur – Jan 2025</li>
-    </ul>
 
+    <div class="event-card">
+        <h3>Reserve Bank of India (Fort)</h3>
+        <p>Energy audit conducted in January 2026.</p>
+    </div>
+
+    <div class="event-card">
+        <h3>Grand Hyatt Santacruz</h3>
+        <p>Audit completed in March 2025.</p>
+    </div>
+
+    <div class="event-card">
+        <h3>Godrej BKC</h3>
+        <p>Energy efficiency analysis in February 2025.</p>
+    </div>
+
+    <div class="event-card">
+    <h3>Workshop - Solar Grid System</h3>
+    <p>Conducted on 8–9 February 2025.</p>
+</div>
+
+<div class="event-card">
+    <h3>Advanced Hydrogen Technology, Applications & Economics</h3>
+    <p>Held on 3 March 2025.</p>
+</div>
+
+<div class="event-card">
+    <h3>Energy Auditors and Managers: The Rising Demand</h3>
+    <p>Conducted on 30 July 2025.</p>
+</div>
+
+<div class="event-card">
+    <h3>Energy Conservation Opportunities for Hotels, Residential & Commercial Buildings</h3>
+    <p>Held on 10 September 2025.</p>
+</div>
+
+<div class="event-card">
+    <h3>Fundamentals of Energy Auditing</h3>
+    <p>Conducted on 6 March 2026.</p>
+</div>
+
+<div class="event-card">
+    <h3>Bio Fuel & Cogeneration</h3>
+    <p>Conducted on 6 March 2026.</p>
+</div>
+
+<div class="event-card">
+    <h3>Industrial Pollution & Control Technologies</h3>
+    <p>Held on 4 April 2026.</p>
+</div>
 </section>
 
 <script>
@@ -92,6 +258,26 @@ function toggleMenu() {
     document.getElementById("nav-links").classList.toggle("active");
 }
 </script>
+ 
+ 
+    <footer style="text-align:center; padding: 30px;">
+    <p>Connect with us</p>
+    <i class="fab fa-instagram"></i>
+    <a href="https://www.instagram.com/the_energy_club_dbitofficial?igsh=ZTk2YTA5bHlibGFu" target="_blank">  <i class="fab fa-instagram"></i> Instagram</a> |
+    <i class="fab fa-linkedin"></i>           
+    <a href="https://www.linkedin.com/in/energy-club-4b8882380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <i class="fab fa-linkedin"></i>        LinkedIn</a>
+                
+</footer>
+ 
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<a href="https://www.instagram.com/the_energy_club_dbitofficial?igsh=ZTk2YTA5bHlibGFu" target="_blank">
+    
+</a>
+
+<a href="https://www.linkedin.com/in/energy-club-4b8882380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+
+</a>
 
 </body>
 </html>
